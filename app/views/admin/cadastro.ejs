@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro cliente</title>
+    
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+<body>
+    <main>
+    <form action="/admin/cadastrar" method="post">
+        <label>Nome</label>
+        <br>
+        <input type="text" name="nome" id="nome" placeholder="Insira o nome do usuário">
+        <br>
+        <label>E-mail</label>
+        <br>
+        <input type="text" name="email" id="email" placeholder="Insira o email do usuário">
+        <br>
+        <label>Senha</label>
+        <br>
+        <textarea name="senha" id="senha" placeholder="Insira a senha do usuário" >
+        <br>
+        <input type="submit" value="Cadastrar">
+        <br>
+        <label>admin/cliente</label>
+        <br>
+        <select name="id_tipo_usuario">
+        <option value="0">Selecione</option>
+        <% for(let i=0; i<tipos.length; i++){ %>
+            <option value="<%= tipos[i].id %>"><%= tipos[i].descricao %></option>
+        <% } %>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Cadastrar">
+    </form>
+    </main>
+</body>
+</html>

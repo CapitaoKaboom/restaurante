@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+<body>
+    <div>
+        <label>Nome</label>
+        <br>
+        <input type="text" name="nome" id="nome" value="<%= usuario.nome %>">
+        <br>
+    </div>
+    <div>
+        <label>E-mail</label>
+        <br>
+        <input type="submit" name="email" id="email" value="<%= usuario.email %>">
+        <br>
+    </div>
+    <input type="submit" value="Salvar">
+</body>
+</html>

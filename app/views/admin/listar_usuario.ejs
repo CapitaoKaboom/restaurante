@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Senha</th>
+            <th>Confirmar senha</th>
+            <th></th>
+        </tr>
+        <% for(let i = 0; i < usuarios.length; i++) { %>
+            <tr>
+                <td><%= usuarios[i].nome %></td>  
+                <td><%= usuarios[i].email %></td>
+                <td><%= usuarios[i].senha %></td>
+                <td><%= usuarios[i].confsenha %></td>
+                <td>
+                    <a href="/usuario/editar/<%= usuarios[i].id %>">Editar</a>
+                    <a href="/usuario/excluir/<%= usuarios[i].id %>">Excluir</a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <input type="submit" value="Salvar">
+</body>
+</html>
+ 

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Descricao</th>
+            <th>Preco</th>
+            
+            <% for(let i = 0; i < produtos.length; i++) { %>
+                <tr>
+                    <td><%= produtos[i].descricao %></td>  
+                    <td><%= produtos[i].preco %></td>
+                    <td>
+                        <a href="/produto/adiconar/<%= produtos[i].id %>">Adicionar ao carrinho</a>
+                        <a href="/produto/editar/<%= produtos[i].id %>">Editar</a>
+                        <a href="/produto/excluir/<%= produtos[i].id %>">Excluir</a>
+                    </td>
+                </tr>
+            <% } %>
+    </table>
+</body>
+</html>

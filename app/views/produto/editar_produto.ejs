@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+<body>
+    <div>
+        <label>Descricao</label>
+        <br>
+        <input type="text" name="descricao" id="descricao" value="<%= produto.descricao %>">
+        <br>
+    </div>
+    <div>
+        <label>Valor</label>
+        <br>
+        <input type="submit" name="valor" id="valor" value="<%= produto.valor %>">
+        <br>
+    </div>
+    <input type="submit" value="Salvar">
+</body>
+</html>

@@ -1,0 +1,12 @@
+*{
+    display: flex;
+    text-align: center;
+    margin: 0% auto;
+}
+body{
+    background-image: url("");
+}
+main{
+    margin: 0% auto;
+    background-color: gray;
+}

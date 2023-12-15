@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro cliente</title>
+
+    <link rel="stylesheet" href="/css/style.css" typr="text/css">
+</head>
+
+<body>
+    <main>
+    <form action="/admin/cadastrar" method="post">
+        <h1>Cadastro de Produto</h1>
+        <br>
+        <label></label>
+        <label>Descrição do produto</label>
+        <br>
+        <input type="text" name="descricao" id="descricao" placeholder="Insira o nome do produto">
+        <br>
+        <label>Valor do produto</label>
+        <br>
+        <input type="text" name="valor" id="valor" placeholder="Insira o valor do produto">
+        <br>
+        <select name="id_tipo_usuario">
+        <option value="0">Selecione</option>
+        <% for(let i=0; i<tipos.length; i++){ %>
+            <option value="<%= tipos[i].id %>"><%= tipos[i].descricao %></option>
+        <% } %>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Cadastrar">
+    </form>
+    </main>
+</body>
+</html>
